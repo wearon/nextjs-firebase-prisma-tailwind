@@ -1,0 +1,51 @@
+{
+  "name": "nextjs-firebase-prisma-tailwind",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production next start",
+    "lint": "eslint \"src/**/*.{ts,tsx,jsx}\" --fix",
+    "lint:next": "next lint",
+    "dbpull": "prisma db pull && prisma generate",
+    "dbpush": "prisma db push && prisma generate",
+    "dbmigrate": "prisma migrate dev --name init",
+    "studio": "prisma studio",
+    "format": "prettier --write ./src/**/*.{ts,tsx}",
+    "reset": "rm -rf ./node_modules && rm -rf ./package-lock.json && yarn"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.13",
+    "@heroicons/react": "^2.0.16",
+    "@prisma/client": "^4.11.0",
+    "@tailwindcss/forms": "^0.5.3",
+    "@types/node": "18.15.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "cookies-next": "^2.1.1",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "firebase": "^9.17.2",
+    "firebase-admin": "^11.5.0",
+    "next": "^13.2.4",
+    "next-api-handler": "^0.4.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-epic-spinners": "^0.5.0",
+    "react-hook-form": "^7.43.5",
+    "react-hot-toast": "^2.4.0",
+    "tracer": "^1.1.6",
+    "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "prisma": "^4.11.0",
+    "tailwindcss": "^3.2.7",
+    "ts-node": "^10.9.1"
+  }
+}
